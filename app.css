@@ -1,14 +1,16 @@
 img{
-    width: 30%;
-    margin: calc(10%/6);
+    width: 30%;             /*Gives each image the width equal to 30% of the parent element - in this case, body, this allows us to have 3 images in a line*/
+    margin: calc(10%/6);    /*Since 3 images cover 90% of the width of the body, we are left with 10%, which we distribute into 2 margins per image (left and right), therefore 6 margins in total*/
 }
 
 nav{
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5em;                       /*1.5 x the font size of parent, in this case html. by default the font size of html is 16px => (1.5 x 16)px*/
     text-transform: uppercase;
-    border-bottom: 2px solid #f1f1f1;
-    width: 30%;
-    padding: 1em 0;
-    margin-left: calc(10%/6);
+    border-bottom: 2px solid #f1f1f1;     /*Adds a gray border only at the bottom*/
+    width: 30%;                             /*Gives it the width equal to 30% of body*/
+    padding: 1em 0;                         /*A padding equal to the font size of the content in nav i.e (1.5 x 16)px 
+                                            (Padding or Margin are sized relative to the font size of the element that they are being applied to, 
+                                            not the font size of parent element)*/
+    margin-left: calc(10%/6);               /*Add a margin of same size as the images have on the left, so that nav is aligned with the leftmost image*/
 }
