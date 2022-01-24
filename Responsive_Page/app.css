@@ -1,0 +1,56 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;              /*Adds equal space between the items (items only, not the edges of the container) within the flex container*/
+}
+
+ul,li {                                          /*Making ul and li both inline is important, otherwise the list items may not actually appear in line*/
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul{                                         
+    flex-grow: 1;                                /*Makes the ul take up all the space between the "Home" and "Sign Up" (The Home link, the Sign Up link and the UL are 3 items in the flex container, nav)*/
+    max-width: 50%;                              /*Sets the maximum width of the ul to 50%, so that the list items are not too far apart from each other*/
+    display: flex;
+    justify-content: space-evenly;               /*Space the list items evenly from each other and the edges of the ul container*/
+}
+
+
+@media (min-width: 400px){                      /*Once the width of the viewport reaches >=400 px, h1 color changes to purple*/
+    h1{
+        color: purple;
+    }
+}
+
+@media (min-width: 600px){                      /*Upon reaching 600px it changes to orange*/
+    h1{
+        color: orange;
+    }
+}
+
+@media (max-width: 768px){                      /*Until the viewport width is less than 768px, h1 is 4em, 
+                                                  and the nav items are column aligned (main axis vertical, cross axis horizontal).*/
+    h1{
+        font-size: 4em;
+    }
+    nav, nav ul{
+        flex-direction: column;
+        align-items: center;                    /*Use align-items instead of justify-content in this case since cross-axis is horizontal in this case (align-items aligns items in the cross axis)*/
+    }  
+}
+
+@media (max-width: 576px){
+    h1{
+        font-size: 2.5em;
+    }  
+}
