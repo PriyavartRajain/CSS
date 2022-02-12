@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- must include bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Bootstrap Form</title>
+</head>
+
+<body style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+color: white;">
+
+    <!-- container is used to set the content’s margin. It contains row elements and the row elements are container of columns.  -->
+    <div class="container">
+        <h1 class="display-2">Forms in Bootstrap</h1>
+        <form action="none">
+            <!-- everything that is inside a form-row (or simply, row) will be displayed on a single row -->
+            <div class="form-row">
+                <!-- Anything below medium width will take up the whole width, once it reaches medium width it takes 6 units of width -->
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+            </div>
+            <!-- Use form-group to group an input and label together -->
+            <div class="form-group">
+                <label for="stAddress">Street Address</label>
+                <input type="text" class="form-control" id="stAddress" placeholder="Street Address">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+                <!-- for all sizes below medium, take up 6 units of space, once it hits medium width, take up 3 units of space -->
+                <div class="form-group col-md-3 col-6">
+                    <label for="state">State</label>
+                    <select name="state" id="state" class="form-control">
+                        <option value="YYC">Calgary</option>
+                        <option value="YCY">Canmore</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3 col-6">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" class="form-control" id="zip">
+                </div>
+            </div>
+            <!-- use custom-control custom-checkbox to get a customized checkbox, must also give class of custom-control-input to the input element -->
+            <div class="form-group custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tos">
+                <label class="custom-control-label" for="tos">Sign Me Up</label>
+            </div>
+            <button type="submit" class="btn btn-success">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
